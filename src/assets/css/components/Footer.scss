@@ -1,0 +1,39 @@
+.Footer {
+   position: relative;
+   background: url(../../images/back6.jpg) fixed no-repeat;
+   background-size: cover;
+   margin-top: 50px;
+   .overlay {
+      padding: 50px 0 20px;
+      background: rgba($color: #000000, $alpha: 0.7);
+      width: 100%;
+      height: 100%;
+      h4 {
+         font-family: 'Notable', sans-serif;
+         color: #fff;
+      }
+      p {
+         margin: 15px 0 15px 0px;
+         color: #aaa;
+         span {
+            color: #13BF6D;
+         }
+         &::before {
+            content: '⊳ ';
+         }
+      }
+      h5 {
+         color: #aaa;
+         text-align: center;
+         margin: 35px 0 10px;
+      }
+   }
+   .divider {
+      transform: rotate(180deg);
+      position: absolute;
+      top: -25px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+   }
+}

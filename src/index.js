@@ -1,13 +1,16 @@
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Layout from './Layout';
 import * as serviceWorker from './serviceWorker';
+import 'CSS/reset.scss';
+window.$ = require('jquery');
+window.jQuery = require('jquery');
+import 'bootstrap/dist/js/bootstrap.bundle'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Layout />,
   document.getElementById('root')
 );
 

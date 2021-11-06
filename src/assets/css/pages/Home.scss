@@ -1,0 +1,500 @@
+@import "../mixins.scss";
+.Home {
+   .services {
+      background-image: url(../../images/back9.png);
+      background-repeat: no-repeat;
+      padding: 60px 0;
+      position: relative;
+      z-index: 9999999;
+      h1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 250px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 50px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 50px;
+            }
+         }
+      }
+      .service {
+         background: #fff;
+         padding: 30px 5px;
+         margin-bottom: 25px;
+         border-radius: 8px;
+         box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.25);
+         text-align: center;
+         cursor: pointer;
+         &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba($color: #000000, $alpha: 0.25);
+         }
+         img {
+            width: 148px;
+            height: 148px;
+         }
+         h3 {
+            margin-top: 20px;
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            color: #13BF6D;
+            span {
+               font-family: 'Indie Flower', cursive;
+               font-weight: bold;
+               color: #FCD462;
+               text-shadow: 0px 0px 2px rgba($color: #000000, $alpha: 1);
+            }
+         }
+         p {
+            color: #656565;
+         }
+      }
+   }
+   .features {
+      background-image: url(../../images/back9.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      padding: 40px 0;
+      h1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 250px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 50px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 50px;
+            }
+         }
+      }
+      .more {
+         display: block;
+         color: #fff;
+         background: #13BF6D;
+         border-color: #13BF6D;
+         border-left: 5px solid #0a9451;
+         border-right: 5px solid #0a9451;
+         border-radius: 40px;
+         padding: 15px 50px;
+         margin: 30px auto;
+      }
+      .feature-dish {
+         @media (min-width: 576px) and (max-width: 992px) {
+            padding: 0px 0 105px;
+         }
+         background: #fff;
+         position: relative;
+         border: 7px solid #13BF6D;
+         padding: 0px 0 65px;
+         margin-bottom: 25px;
+         border-radius: 50px;
+         box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.2);
+         text-align: center;
+         overflow: hidden;
+         &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 6px rgba($color: #000000, $alpha: 0.2);
+         }
+         img {
+            height: 350px;
+         }
+         h3 {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            color: #13BF6D;
+            border-bottom: 3px solid #13BF6D;
+            border-top: 3px solid #13BF6D;
+            background: rgba($color: #13BF6D, $alpha: 0.15);
+         }
+         button {
+            position: absolute;
+            right: 0;
+            color: #fff;
+            background: #13BF6D;
+            border: 0;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            &:hover {
+               transform: none;
+               background: #FCD462;
+            }
+         }
+         span {
+            position: absolute;
+            left: 0;
+            color: #fff;
+            background: #13BF6D;
+            border: 0;
+            border-radius: 0 20px 20px 0;
+            padding: 10px 15px 10px 20px;
+            @media (min-width: 576px) and (max-width: 992px) {
+               border-radius: 20px 0 0 20px;
+               padding: 10px 15px;
+               right: 0;
+               bottom: 0;
+            }
+         }
+      }
+   }
+   .special-events {
+      background-image: url(../../images/back10.png);
+      background-repeat: no-repeat;
+      padding: 80px 0;
+      position: relative;
+      z-index: 9;
+      h1.mainH1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 250px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 50px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 50px;
+            }
+         }
+      }
+      .coupon {
+         margin: 40px 0 30px;
+         img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            &:hover {
+               transform: scale(1.03) translateY(-5px);
+            }
+         }
+      }
+      .nav-pills {
+         a.nav-link {
+            color: #13BF6D;
+            padding: 10px 15px;
+            i {
+               color: #13BF6D;
+            }
+            &.active {
+               color: #fff;
+               background: #13BF6D;
+               font-weight: bold;
+               i {
+                  color: #fff;
+               }
+            }
+         }
+      }
+      .tab-content {
+         .tab-pane {
+            position: relative;
+            overflow: hidden;
+            padding: 25px;
+            background: rgba($color: #13BF6D, $alpha: 0.1);
+            border-radius: 10px;
+            h1 {
+               font-family: 'Indie Flower', cursive;
+               color: #13BF6D;
+               font-weight: bold;
+            }
+            p {
+               color: #656565;
+               position: relative;
+               z-index: 2;
+            }
+            img {
+               opacity: 0.3;
+               width: 300px;
+               height: 300px;
+               border-radius: 50%;
+               border: 3px solid rgba($color: #13BF6D, $alpha: 0.3);
+               position: absolute;
+               right: -80px;
+               bottom: -30px;
+               z-index: 1;
+            }
+            button {
+               background: transparent;
+               color: #13BF6D;
+               border-radius: 30px;
+               border: 5px solid #13BF6D;
+               border-top: none;
+               border-bottom: none;
+               i {
+                  color: #13BF6D;
+               }
+               &:hover {
+                  transform: none;
+                  background: #13BF6D;
+                  color: #fff;
+                  i {
+                     color: #fff;
+                  }
+               }
+            }
+         }
+      }
+   }
+   .booking {
+      position: relative;
+      background: url(../../images/gallery6.jpg) fixed no-repeat;
+      background-size: 100% 100%;
+      margin: 0px 0 50px;
+      .divider1 {
+         position: absolute;
+         top: -25px;
+         left: 0;
+         width: 100%;
+         height: 50px;
+         transform: rotate(180deg);
+      }
+      .divider2 {
+         position: absolute;
+         bottom: -20px;
+         left: 0;
+         width: 100%;
+         height: 50px;
+      }
+      .overlay {
+         padding: 100px 0 130px;
+         background: rgba($color: #000000, $alpha: 0.7);
+         h1 {
+            font-family: 'Indie Flower', cursive;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            &::after {
+               content: '';
+               display: block;
+               width: 250px;
+               height: 2px;
+               background: #fff;
+               border-radius: 50%;
+               margin: 0 auto 50px;
+            }
+         }
+         .book {
+            width: 60%;
+            margin: 0 auto;
+            @include xs {
+               width: 100%;
+            }
+            label {
+               margin-left: 25px;
+               font-size: 24px;
+               color: #fff;
+               display: block;
+            }
+            input {
+               font-size: 24px;
+               color: #fff;
+               display: block;
+               background: rgba($color: #0a9451, $alpha: 0.8);
+               border-radius: 35px;
+               width: 100%;
+               margin-bottom: 35px;
+               border: 15px solid #13BF6D;
+               border-top: none;
+               border-bottom: none;
+               &:focus {
+                  border-color: #13BF6D;
+               }
+               &::placeholder {
+                  color: #13BF6D;
+               }
+            }
+            button {
+               background: #13BF6D;
+               color: #fff;
+               border: none;
+               padding: 10px 50px;
+               &:hover {
+                  transform: none;
+               }
+            }
+         }
+      }
+   }
+   .special-offers {
+      padding: 80px 0;
+      h1.mainH1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 250px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 50px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 50px;
+            }
+         }
+      }
+      .left-box {
+         display: flex;
+         flex-wrap: wrap;
+         .img {
+            flex: 0 0 50%;
+            position: relative;
+            width: 50%;
+            height: 240px;
+            overflow: hidden;
+            cursor: pointer;
+            &:hover {
+               span {
+                  transform: translateX(0);
+               }
+            }
+            img {
+               width: 100%;
+               height: 100%;
+               & + span {
+                  content: '';
+                  width: 100%;
+                  height: 100%;
+                  background: rgba($color: #000000, $alpha: 0.7);
+                  display: block;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 9999;
+                  cursor: pointer;
+                  transform: translateX(-500px);
+                  i {
+                     color: #f6f6f6;
+                     font-size: 36px;
+                     position: absolute;
+                     top: 50%;
+                     left: 50%;
+                     transform: translate(-50%, -50%);
+                  }
+               }
+            }
+         }
+      }
+      .right-box {
+         @include md {
+            margin-top: 25px;
+         }
+         .offer {
+            display: flex;
+            padding: 15px 0;
+            img {
+               width: 120px;
+               height: 120px;
+               border-radius: 50% 10px 50% 10px;
+               border: 3px groove #13BF6D;
+               margin-right: 10px;
+               cursor: pointer;
+            }
+            .info {
+               padding: 10px;
+               h2 {
+                  cursor: pointer;
+                  font-family: 'Indie Flower', cursive;
+                  color: #13BF6D;
+                  font-weight: bold;
+               }
+               p {
+                  color: #656565;
+               }
+            }
+            .price {
+               display: flex;
+               align-items: center;
+               h1 {
+                  box-shadow: 0 8px 8px rgba($color: #13BF6D, $alpha: 0.35);
+                  background: #fff;
+                  border: 3px dashed #0a9451;
+                  padding: 15px 18px;
+                  border-radius: 50%;
+                  color: #0a9451;
+                  font-family: 'Indie Flower', cursive;
+                  font-weight: bold;
+               }
+            }
+         }
+      }
+   }
+   .reviews {
+      padding: 80px 0;
+      h1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 50px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 50px;
+            }
+         }
+      }
+      .slide {
+         display: flex!important;
+         padding: 30px 25px;
+         background: rgba($color: #13BF6D, $alpha: 0.4);
+         border: 8px solid #fff;
+         border-radius: 40px!important;
+         .img {
+            flex: 0 0 28%;
+            img {
+               width: 120px;
+               height: 120px;
+               border-radius: 50%;
+               border: 5px dotted rgba($color: #13BF6D, $alpha: 0.5);
+            }
+         }
+         .review {
+            padding-left: 10px;
+            p {
+               color: #656565;
+            }
+            h2 {
+               font-family: 'Indie Flower', cursive;
+               font-weight: bold;
+               color: #0a9451;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,96 @@
+@import "../mixins.scss";
+.Menu {
+   padding: 80px 0;
+   .item {
+      text-align: center;
+      img {
+         width: 150px;
+         height: 150px;
+         border-radius: 50%;
+         border: 5px double #13BF6D;
+         cursor: pointer;
+         @include sm {
+            width: 120px;
+            height: 120px;
+         }
+      }
+      h3 {
+         color: #13BF6D;
+         font-family: 'Indie Flower', cursive;
+         font-weight: bold;
+         margin-top: 15px;
+      }
+   }
+   .raw {
+      padding: 70px 0;
+      h1.mainH1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         text-align: center;
+         &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 50px;
+         }
+         &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 50px;
+            }
+         }
+         margin-left: 10px;
+      }
+      .food {
+         display: flex;
+         padding: 15px 0;
+         img {
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            border: 6px double #13BF6D;
+            margin-right: 10px;
+            cursor: pointer;
+         }
+         .info {
+            padding: 0 10px;
+            h2 {
+               cursor: pointer;
+               font-family: 'Indie Flower', cursive;
+               color: #13BF6D;
+               font-weight: bold;
+            }
+            p {
+               color: #656565;
+            }
+         }
+         .price {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            h1 {
+               box-shadow: 0 8px 8px rgba($color: #13BF6D, $alpha: 0.35);
+               background: rgba($color: #13BF6D, $alpha: 0.05);
+               border: 3px double #0a9451;
+               padding: 8px 12px 5px;
+               border-radius: 50%;
+               color: #0a9451;
+               font-family: 'Indie Flower', cursive;
+               font-weight: bold;
+            }
+         }
+      }
+   }
+}

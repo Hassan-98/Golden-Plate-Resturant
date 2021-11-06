@@ -1,0 +1,60 @@
+@import "../mixins.scss";
+.Header {
+   position: relative;
+   background: url(../../images/back1.jpg) fixed no-repeat;
+   background-size: cover;
+   height: 90vh;
+   margin-bottom: 50px;
+   @include sm {
+      height: 100vh;
+   }
+   &.alt {
+      background: url(../../images/back5.jpg) fixed no-repeat;
+      background-size: 100% 100%;
+      height: 70vh;
+      @include sm {
+         height: 80vh;
+      }
+   }
+   .overlay {
+      background: rgba($color: #000000, $alpha: 0.7);
+      height: 100%;
+      .header {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         font-weight: bold;
+         text-align: center;
+         img {
+            width: 128px;
+            height: 128px;
+         }
+         h1 {
+            color: #FCD462;
+            font-family: 'Notable', sans-serif;
+            span {
+               color: #F6C358;
+               font-family: 'Notable', sans-serif;
+            }
+         }
+         h3 {
+            color: #FCD462;
+            font-family: 'Notable', sans-serif;
+         }
+         h4 {
+            color: #eee;
+         }
+         p {
+            color: #eee;
+         }
+      }
+   }
+   .divider {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+   }
+}

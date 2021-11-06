@@ -1,0 +1,111 @@
+@import "../mixins.scss";
+.Shop {
+   input {
+      width: 100%;
+      background: rgba($color: #13BF6D, $alpha: 0.15);
+      color: #0a9451;
+      border: 5px solid #0a9451;
+      border-top: 0;
+      border-bottom: 0;
+      border-radius: 50px;
+      &::placeholder {
+         color: #0a9451;
+      }
+   }
+   .items {
+      background-image: url(../../images/back9.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      padding: 40px 0;
+      h1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 250px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 50px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 50px;
+            }
+         }
+      }
+      .more {
+         display: block;
+         color: #fff;
+         background: #13BF6D;
+         border-color: #13BF6D;
+         border-left: 5px solid #0a9451;
+         border-right: 5px solid #0a9451;
+         border-radius: 40px;
+         padding: 15px 50px;
+         margin: 30px auto;
+      }
+      .feature-dish {
+         @media (min-width: 576px) and (max-width: 992px) {
+            padding: 0px 0 105px;
+         }
+         background: #fff;
+         position: relative;
+         border: 7px solid #13BF6D;
+         padding: 0px 0 65px;
+         margin-bottom: 35px;
+         border-radius: 50px;
+         box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.2);
+         text-align: center;
+         overflow: hidden;
+         &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 6px rgba($color: #000000, $alpha: 0.2);
+         }
+         img {
+            height: 350px;
+         }
+         h3 {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+            color: #13BF6D;
+            border-bottom: 3px solid #13BF6D;
+            border-top: 3px solid #13BF6D;
+            background: rgba($color: #13BF6D, $alpha: 0.15);
+         }
+         button {
+            position: absolute;
+            right: 0;
+            color: #fff;
+            background: #13BF6D;
+            border: 0;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            &:hover {
+               transform: none;
+               background: #FCD462;
+            }
+         }
+         span {
+            position: absolute;
+            left: 0;
+            color: #fff;
+            background: #13BF6D;
+            border: 0;
+            border-radius: 0 20px 20px 0;
+            padding: 10px 15px 10px 20px;
+            @media (min-width: 576px) and (max-width: 992px) {
+               border-radius: 20px 0 0 20px;
+               padding: 10px 15px;
+               right: 0;
+               bottom: 0;
+            }
+         }
+      }
+   }
+}

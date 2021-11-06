@@ -1,0 +1,91 @@
+@import "../mixins.scss";
+.Gallery {
+   padding: 100px 0;
+   .buttons {
+      text-align: center;
+      h1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         text-align: center;
+         &::after {
+            content: '';
+            display: block;
+            width: 450px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin: 0 auto 50px;
+         }
+      }
+      button {
+         background: #13BF6D;
+         color: #fff;
+         border: 3px double #0a9451;
+         font-size: 20px;
+         padding: 9px 50px;
+      }
+   }
+   .images {
+      margin: 50px 0;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      .img {
+         cursor: pointer;
+         flex: 0 0 25%;
+         width: 25%;
+         height: 350px;
+         @include md {
+            flex: 0 0 33.33333%;
+            width: 33.33333%;
+            height: 250px;
+         }
+         @include sm {
+            flex: 0 0 50%;
+            width: 50%;
+            height: 300px;
+         }
+         @include xs {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 350px;
+         }
+         position: relative;
+         overflow: hidden;
+         &:hover {
+            &::after {
+               top: 0;
+            }
+         }
+         &::after {
+            transition: all 0.3s ease;
+            content: "\f06e";
+            vertical-align: middle;
+            font-weight: 900;
+            text-align: center;
+            color: #fff;
+            padding: 150px 0;
+            font-weight: bold;
+            font-family: "Font Awesome 5 Free";
+            display: inline-block;
+            font-size: 36px;
+            width: 100%;
+            height: 100%;
+            background: rgba($color: #000000, $alpha: 0.7);
+            position: absolute;
+            top: -500px;
+            left: 0;
+            @include md {
+               padding: 100px 0;
+            }
+            @include sm {
+               padding: 120px 0;
+            }
+            @include xs {
+               padding: 150px 0;
+            }
+         }
+      }
+   }
+}

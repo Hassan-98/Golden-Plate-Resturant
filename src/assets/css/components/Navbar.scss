@@ -1,0 +1,137 @@
+@import "../mixins.scss";
+.Nav-Container {
+   z-index: 99999999999999999!important;
+   .announcement {
+      padding: 5px 0;
+      background: red;
+      text-align: center;
+      position: relative;
+      p {
+         color: #fff;
+         margin: 0;
+         cursor: pointer;
+      }
+      .badge {
+         position: relative;
+         top: -1px;
+         margin: 0 5px;
+         color: red;
+      }
+      i {
+         position: absolute;
+         right: 15px;
+         top: 50%;
+         color: #fff;
+         transform: translateY(-50%);
+         cursor: pointer;
+      }
+   }
+   .authDiv {
+      padding: 8px 0;
+      background: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      i {
+         margin-right: 5px;
+         color: #13BF6D;
+      }
+      .right {
+         float: right;
+         @include xs {
+            float: none;
+         }
+         .cart {
+            border-left: 1px solid #ccc;
+            padding: 0 15px;
+            color: #13BF6D;
+            font-weight: bold;
+            span {
+               color: #13BF6D;
+               font-weight: bold;
+            }
+         }
+         a {
+            color: #13BF6D;
+            text-decoration: none;
+            padding-right: 15px;
+            font-weight: bold;
+         }
+      }
+      .left {
+         float: left;
+         p {
+            margin: 0;
+            color: #13BF6D;
+            font-weight: bold;
+         }
+         @include xs {
+            float: none;
+         }
+      }
+   }
+   .Navbar {
+      background: rgba($color: #000000, $alpha: 0.5);
+      color: #fff;
+      .navbar-brand {
+         font-family: 'Notable', sans-serif;
+         font-size: 28px;
+         color: #FCD462;
+         text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.5);
+      }
+      .navbar-toggler {
+         outline: none;
+         .icon-toggler {
+            color: #fff;
+         }
+      }
+      .nav-item {
+         .nav-link {
+            position: relative;
+            padding: 0 10px;
+            color: #f9f9f9;
+            transition: all 0.3s ease;
+            &::before {
+               content: "⊳ ";
+               display: inline-block;
+               font-weight: bold;
+               transform: translateX(20px);
+               opacity: 0;
+               transition: all 0.3s ease;
+            }
+            &::after {
+               content: "⊲ ";
+               display: inline-block;
+               font-weight: bold;
+               transform: translateX(-20px);
+               opacity: 0;
+               transition: all 0.3s ease;
+            }
+            &.active, &:hover {
+               color: #FCD462;
+               &::before {
+                  opacity: 1;
+                  color: #FCD462;
+                  transform: translateX(-5px);
+               }
+               &::after {
+                  opacity: 1;
+                  color: #FCD462;
+                  transform: translateX(5px);
+               }
+            }
+            @include md {
+               &.active, &:hover {
+                  color: #fff;
+                  background: #FCD462;
+               }
+               z-index: 9999;
+               padding: 10px 20px;
+               &::before {
+                  content: "∷ ";
+               }
+            }
+         }
+      }
+   }
+}

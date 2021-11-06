@@ -1,0 +1,179 @@
+@import "../mixins.scss";
+.About {
+   .intro {
+      background-image: url(../../images/back9.png);
+      background-repeat: no-repeat;
+      padding: 120px 0;
+      h1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 400px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 20px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 20px;
+               width: 250px;
+            }
+         }
+         @include xs {
+            font-size: 38px;
+         }
+      }
+      img {
+         border: 7px groove #13BF6D;
+         box-shadow: 1px 5px 10px rgba($color: #000, $alpha: 0.3);
+      }
+      p {
+         color: #656565;
+         font-size: 16px;
+         word-spacing: 5px;
+      }
+      .highlights {
+         margin: 50px 0 30px;
+         h2 {
+            font-family: 'Indie Flower', cursive;
+            color: #13BF6D;
+            font-weight: bold;
+            i {
+               font-size: 24px;
+            }
+         }
+         .highlight {
+            padding: 10px 15px;
+            background: rgba($color: #13BF6D, $alpha: 0.1);
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            p {
+               color: #656565;
+               margin: 0;
+            }
+            span {
+               margin-right: 10px;
+               line-height: 35px;
+               background: #13BF6D;
+            }
+         }
+      }
+   }
+   .chefs {
+      background-image: url(../../images/back9.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      padding: 80px 0;
+      h1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 250px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 60px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 60px;
+            }
+         }
+      }
+      .chef {
+         text-align: center;
+         @include sm {
+            margin-bottom: 50px;
+         }
+         img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 10px groove rgba($color: #13BF6D, $alpha: 0.8);
+            border-left: 0;
+            border-right: 0;
+            margin-bottom: 20px;
+         }
+         h2 {
+            font-family: 'Indie Flower', cursive;
+            color: #13BF6D;
+            font-weight: bold;
+         }
+         span {
+            color: #aaa;
+            font-style: italic;
+         }
+         p {
+            border: 2px solid rgba($color: #13BF6D, $alpha: 0.5);
+            background: rgba($color: #13BF6D, $alpha: 0.1);
+            border-left: 0;
+            border-right: 0;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 15px 5px;
+            color: #656565;
+         }
+      }
+   }
+   .reviews {
+      padding: 80px 0;
+      h1 {
+         font-family: 'Indie Flower', cursive;
+         color: #13BF6D;
+         font-weight: bold;
+         &::after {
+            content: '';
+            display: block;
+            width: 150px;
+            height: 2px;
+            background: #13BF6D;
+            border-radius: 50%;
+            margin-bottom: 50px;
+         }
+         @include sm {
+            text-align: center;
+            &::after {
+               margin: 0 auto 50px;
+            }
+         }
+      }
+      .slide {
+         display: flex!important;
+         padding: 30px 25px;
+         background: rgba($color: #13BF6D, $alpha: 0.4);
+         border: 8px solid #fff;
+         border-radius: 40px!important;
+         .img {
+            flex: 0 0 28%;
+            img {
+               width: 120px;
+               height: 120px;
+               border-radius: 50%;
+               border: 5px dotted rgba($color: #13BF6D, $alpha: 0.5);
+            }
+         }
+         .review {
+            padding-left: 10px;
+            p {
+               color: #656565;
+            }
+            h2 {
+               font-family: 'Indie Flower', cursive;
+               font-weight: bold;
+               color: #0a9451;
+            }
+         }
+      }
+   }
+}
